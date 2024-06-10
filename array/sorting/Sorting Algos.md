@@ -2,3 +2,6 @@
 [[Counting Sort]]
 [[Bucket Sort]]
 [[Rapid Sort]]
+[[Insertion Sort]]
+[[Quicksort]]
+[[Radix Sort]]
