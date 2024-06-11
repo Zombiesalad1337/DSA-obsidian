@@ -1,10 +1,10 @@
-| Class                       | [[Sorting Algos]]                                                                                  |
-| --------------------------- | -------------------------------------------------------------------------------------------------- |
-| Data structure              | [[Array]]                                                                                          |
-| Worst-case performance<br>  | $O(n^2)$                                                                                           |
-| Average performance         | $O(n^2 + \frac{n}{k} + k)$<br>where $k$ is the number of buckets<br><br>$O(n)$, when $k \approx n$ |
-| Worst-case space complexity | $O(n+k)$                                                                                           |
-|                             |                                                                                                    |
+| Class                       | [[Sorting Algos]]                                                                                                                          |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Data structure              | [[Array]]                                                                                                                                  |
+| Worst-case performance<br>  | $O(n^2)$                                                                                                                                   |
+| Average performance         | $O(n + \frac{n^2}{k} + k)$<br>where $k$ is the number of buckets<br><br>$O(n)$, when $k = \Theta(n)$ (given a uniformly distributed input) |
+| Worst-case space complexity | $O(n+k)$                                                                                                                                   |
+|                             |                                                                                                                                            |
 
 **Generalization** (I am a kind of ...)  
 [_distribution sort_](https://xlinux.nist.gov/dads/HTML/distributionSort.html).
@@ -48,3 +48,10 @@ Using _bucketSort_ itself as _nextSort_ produces a relative of [[Radix Sort]]; i
 
 #### Worst-case analysis
 When the input contains several keys that are close to each other (**clustering**), those elements are likely to be placed in the same bucket, which results in some buckets containing more elements than average. **The worst-case scenario occurs when all the elements are placed in a single bucket.** The overall performance would then be dominated by the algorithm used to sort each bucket, for example, $O(n^2)$ [[Insertion Sort]] or  $O(nlog(n)$ comparison sort algorithms, such as [[Merge Sort]].
+
+### Optimizations
+A common optimization is to put the unsorted elements of the buckets back in the original array _first_, then run [[Insertion Sort]] over the complete array; because insertion sort's runtime is based on how far each element is from its final position, the number of comparisons remains relatively small, and the memory hierarchy is better exploited by storing the list contiguously in memory.
+
+****
+If the input distribution is known or can be estimated, buckets can often be chosen which contain constant density (rather than merely having constant size). This allows $O ( n )$ average time complexity even without uniformly distributed input.
+****
