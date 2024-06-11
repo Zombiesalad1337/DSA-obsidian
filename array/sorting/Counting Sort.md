@@ -10,6 +10,7 @@ A [[Histogram Sort]] sets up buckets of exactly the right size in a first pass.
 A [[Counting Sort]] is a histogram sort with one bucket per possible key value.
 A [[Pigeonhole sort]] is a counting sort that moves items to the auxiliary array instead of counting them._
 
+Used as subroutine in [[Radix Sort]]
 
 ### Problems
 ****
