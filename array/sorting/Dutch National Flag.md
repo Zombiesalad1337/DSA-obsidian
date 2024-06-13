@@ -41,3 +41,7 @@ procedure three-way-partition(A : array of values, mid : value):
 _Note: Using this algorithm in [[Quicksort]] to [_partition_](https://xlinux.nist.gov/dads/HTML/partition.html) elements, with the middle group being elements equal to the pivot, lets quicksort avoid "resorting" elements that equal the pivot.
 
 in particular, variants of the [[Quicksort]] algorithm that must be [robust to repeated elements](https://en.wikipedia.org/wiki/Quicksort#Repeated_elements "Quicksort") may use a three-way partitioning function that groups items less than a given key (red), equal to the key (white) and greater than the key (blue). Several solutions exist that have varying performance characteristics, tailored to sorting arrays with either small or large numbers of repeated elements.
+
+### Problems
+***
+1. [75. Sort Colors](https://leetcode.com/problems/sort-colors/)

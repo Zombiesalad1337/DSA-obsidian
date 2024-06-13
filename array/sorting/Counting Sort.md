@@ -17,3 +17,4 @@ Used as subroutine in [[Radix Sort]]
 1. https://leetcode.com/problems/height-checker/
 2. https://leetcode.com/problems/relative-sort-array/
 3. https://leetcode.com/problems/sort-characters-by-frequency/
+4. [2037. Minimum Number of Moves to Seat Everyone](https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/)
