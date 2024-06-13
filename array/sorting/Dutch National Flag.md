@@ -1,4 +1,4 @@
-
+#sort
 Complexity: $\Theta(n)$ moves and examinations
 
 **Definition:** Rearrange elements in an [[Array]] into three groups: bottom, middle, and top.

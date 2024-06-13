@@ -1,4 +1,4 @@
-
+#sort
 **Definition**: A 2-pass sort algorithm that is **efficient when the number of distinct keys is small compared to the number of items.** The first pass counts the occurrences of each key in an auxiliary array, and then makes a running total so each auxiliary entry is the number of preceding keys. The second pass puts each item in its final place according to the auxiliary entry for that key. 
 
 **Generalization** (I am a kind of ...)  
